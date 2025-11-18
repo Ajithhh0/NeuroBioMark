@@ -82,9 +82,9 @@ def nav_buttons():
 
 <div class="nav-center">
 <a class="{cls("Home")}" href="?page=Home" target="_self">Home</a>
-<a class="{cls("Page2")}" href="?page=Page2" target="_self">Background</a>
-<a class="{cls("Page3")}" href="?page=Page3" target="_self">Research</a>
-<a class="{cls("Page4")}" href="?page=Page4" target="_self">Team</a>
+<a class="{cls("Background")}" href="?page=Background" target="_self">Background</a>
+<a class="{cls("Research")}" href="?page=Research" target="_self">Research</a>
+<a class="{cls("Team")}" href="?page=Team" target="_self">Team</a>
 
 
 </div>

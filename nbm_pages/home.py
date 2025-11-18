@@ -13,18 +13,19 @@ def render(encoded):
 
     # --- BACKGROUND IMAGE (RESTORED TO ORIGINAL WORKING LAYER) ---
     st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("data:image/jpg;base64,{encoded}");
-            background-size: 70% auto;
-            background-position: center;
-            background-repeat: no-repeat;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    f"""
+    <style>
+    [data-testid="stAppViewContainer"] {{
+        background-image: url("data:image/jpg;base64,{encoded}");
+        background-size: 70% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
     # --- CONTENT BOX (UNCHANGED) ---
     st.markdown(
