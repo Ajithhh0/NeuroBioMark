@@ -14,19 +14,19 @@ footer {visibility: hidden !important;}
 .block-container {padding-top: 0 !important;}
 [data-testid="stSidebar"] {display: none !important;}
 
-/* STEP 1 — Prevent the blue flash */
+
 html, body,
 [data-testid="stAppViewContainer"] {
     background-color: #000000 !important;
 }
 
-/* STEP 2 — Allow page background images to show */
+
 .stApp {
     background-color: transparent !important;
     background-image: none !important;
 }
 
-/* STEP 3 — STRONG OVERRIDE (wins after render) */
+
 html body .stApp {
     background-color: transparent !important;
 }
