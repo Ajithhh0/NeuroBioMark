@@ -19,68 +19,58 @@ def nav_buttons():
     z-index: 9999;
     height: 70px;
     width: 100%;
-    background: black;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(12px);
 }}
 .nav-container {{
-    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
     height: 100%;
-    width: 100%;
-}}
-.nav-left {{
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}}
-.nav-center {{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
-    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
 }}
+
 .nav-logo {{
     height: 48px;
+    margin-left: 10px;
 }}
 .nav-btn {{
-    background: transparent;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 5px 22px;
+    border-radius: 40px;
+    text-decoration: none;
     color: white;
-    font-size: 18px;
-    cursor: pointer;
-    text-decoration: none !important;
-    position: relative;
-    padding: 6px 6px;
+    border: 2px solid rgba(0,243,255,0.3);
+    background: rgba(0,243,255,0.07);
+    transition: all 0.25s ease;
 }}
-.nav-btn::after {{
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: white;
-    transition: width 0.25s ease;
-}}
-.nav-btn:hover::after {{
-    width: 100%;
+
+.nav-btn:hover: {{
+    background: #00f3ff;
+    color: black;
+    box-shadow: 0 0 12px #00f3ff;
+    border-color: #00f3ff;
 }}
 .active {{
-    color: #00f3ff !important;
-    font-weight: 700;
+    background: #00f3ff !important;
+    color: black !important;
+    border-color: #00f3ff !important;
+    box-shadow: 0 0 14px #00f3ff !important;
+    font-weight: 600;
 }}
-.active::after {{
-    width: 0 !important;
-}}
+
 </style>
 
 <div class="nav-wrapper">
-<div class="nav-container">
-<div class="nav-left">
-<img class="nav-logo" src="data:image/png;base64,{logo_data}">
-</div>
+  <div class="nav-container">
 
-<div class="nav-center">
+<img class="nav-logo" src="data:image/png;base64,{logo_data}">
+
+
+<div class="nav-links">
 <a class="{cls("Home")}" href="?page=Home" target="_self">Home</a>
 <a class="{cls("Background")}" href="?page=Background" target="_self">Background</a>
 <a class="{cls("Research")}" href="?page=Research" target="_self">Research</a>
